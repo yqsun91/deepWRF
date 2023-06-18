@@ -8,16 +8,19 @@ This is a tutorial for using WRF (Deep configuration with model top at 1 Pa) to 
 
 
 **1. data preparation**
-    WRF is regional model. After we decide the domain location and the simulation period, we need to provide initial condition (IC) and boundary condition (BC) for the simulation. The IC and BC usually come from global re-analysis data. In our example, we use ERA5 data (137 model level, with model top also set 1 Pa). The model top of WRF is limited by the top boundary of the global re-analysis data.
+    
+WRF is regional model. After we decide the domain location and the simulation period, we need to provide initial condition (IC) and boundary condition (BC) for the simulation. The IC and BC usually come from global re-analysis data. In our example, we use ERA5 data (137 model level, with model top also set 1 Pa). The model top of WRF is limited by the top boundary of the global re-analysis data.
 
-   ERA5 data can be downloaded from the Climate Data Store (CDS) https://cds.climate.copernicus.eu/#!/home
-   There is detailed instruction on this here. https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5
-   I will work on more details regarding our application in the upcoming days.
+ERA5 data can be downloaded from the Climate Data Store (CDS) https://cds.climate.copernicus.eu/#!/home
+There is detailed instruction on this here. https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5
+I will work on more details regarding our application in the upcoming days.
 
 
 **2. Compile WRF and WPS Model**
-    We use WRF model (based on WRF version 4.0) that is modified by Chris Kruse
-    https://drive.google.com/file/d/19nsFJ1gtRHfsx6oYj86WwuyxuTz7QDxJ/view?usp=share_link 
+    
+We use WRF model (based on WRF version 4.0) that is modified by Chris Kruse [(Kruse et al. 2022)](https://doi.org/10.1175/JAS-D-21-0252.1)
+    
+[WRF source file provided by Dr. Kruse](https://drive.google.com/file/d/19nsFJ1gtRHfsx6oYj86WwuyxuTz7QDxJ/view?usp=share_link)
 
 **3. Running WPS**
 
@@ -31,7 +34,8 @@ This is a tutorial for using WRF (Deep configuration with model top at 1 Pa) to 
 # A few Tricks
 
 **1. saving I/O time**
-   Output file on each processer and join them later
+   
+Output file on each processer and join them later
   
   
 **2. Model stability**
