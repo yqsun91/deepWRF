@@ -34,6 +34,36 @@ b. script for configure and compile WRF on Stampede2
 
 **3. Running WPS**
 
+WPS is short for WRF Pre-Processing System. It prepares the input to WRF for real-data simulations. 
+Here is the figure from NCAR for understanding.
+
+<img width="833" alt="Screenshot 2023-06-18 at 12 25 21 PM" src="https://github.com/yqsun91/deepWRF/assets/85260799/d4cc78ab-8211-454d-91f5-0a3783b06514">
+
+All the parameters are set in namelist.wps
+
+a. GEOGRID
+
+change namelist.wps to set the domain. More on this in WRF user guide released by NCAR
+
+run geogrid.exe
+
+b. UNGRIB
+
+link downloaded ERA5 file (need some processing)
+
+link correct Vtable (IMPORTANT)
+
+run ungrib.exe (do not support parrallal, use 1 processor for this)
+
+If ERA5 model level data is used, use ecmwf_coeffs and then run ./calc_ecmwf_p.exe
+
+c. METGRID 
+
+change METGRID.TBL
+
+run metgrid.exe
+
+
 
 **4. Running real.exe to generate IC/BC**
 
