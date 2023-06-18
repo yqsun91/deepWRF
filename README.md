@@ -22,6 +22,16 @@ We use WRF model (based on WRF version 4.0) that is modified by Chris Kruse [(Kr
     
 [WRF source file provided by Dr. Kruse](https://drive.google.com/file/d/19nsFJ1gtRHfsx6oYj86WwuyxuTz7QDxJ/view?usp=share_link)
 
+A detailed introduction on compiling the WRF and WPS model is also provided by NCAR.
+I also put that in the [configure_compiling_WRF.pdf](https://github.com/yqsun91/deepWRF/blob/main/configure_compiling_WRF.pdf)
+
+It could take some time to compile both in a new system.
+Here I provide the script I use on Stampede2
+a. script for installing required libraries on Stampede
+b. script for configure and compile WRF on Stampede2
+
+**After** WRF is compiled, then WPS can be compiled fairly easily. Any version of WPS after 4.0 released by NCAR will be good as no modification is made for WPS.
+
 **3. Running WPS**
 
 
