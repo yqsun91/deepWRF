@@ -59,6 +59,8 @@ link downloaded ERA5 file (need some processing)
 
 link correct Vtable (IMPORTANT)
 
+[Vtable_for_ERA5_ml](https://github.com/yqsun91/deepWRF/blob/main/Vtable_for_ERA5_ml)
+
 run ungrib.exe (do not support parrallal, use 1 processor for this)
 
 If ERA5 model level data is used, use ecmwf_coeffs and then run ./calc_ecmwf_p.exe
