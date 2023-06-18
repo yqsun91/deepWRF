@@ -16,7 +16,8 @@ This is a tutorial for using WRF (Deep configuration with model top at 1 Pa) to 
 
 
 2. Compile WRF and WPS Model
-
+    We use WRF model (based on WRF version 4.0) that is modified by Chris Kruse
+    https://drive.google.com/file/d/19nsFJ1gtRHfsx6oYj86WwuyxuTz7QDxJ/view?usp=share_link 
 
 3. Running WPS
 
