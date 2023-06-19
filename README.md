@@ -101,6 +101,12 @@ run metgrid.exe
 
 **4. Running real.exe to generate IC/BC**
 
+**Modify the namelist.input** before running real.exe.
+
+The namelist.input file, in my personal opinion, is the most important file for running WRF simulations. It contains all the setting for runing WRF. A detailed description of this file can be found [here](https://esrl.noaa.gov/gsd/wrfportal/namelist_input_options.html)
+
+
+
 **5. Running wrf.exe**
 
 
