@@ -36,7 +36,13 @@ b. script for configure and compile WRF on Stampede2
 [compile_WRF_stampede2.sh](https://github.com/yqsun91/deepWRF/blob/main/compile_WRF_stampede2.sh)
 
 
+If compiled successfully, one will find wrf.exe and real.exe in the **run** folder.
+
+
+
 **After** WRF is compiled, then WPS can be compiled fairly easily. Any version of WPS after 4.0 released by NCAR will be good as no modification is made for WPS.
+
+
 
 **3. Running WPS**
 
@@ -68,6 +74,8 @@ If ERA5 model level data is used, use ecmwf_coeffs and then run ./calc_ecmwf_p.e
 c. METGRID 
 
 change METGRID.TBL
+
+Kruse et al. 2022 have more details on this, changing the default sixteen point averaging to 4 point averaging when doing the interpolation helps remove the unphysical extrapolation, especially in regions with complex terrain
 
 run metgrid.exe
 
