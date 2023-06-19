@@ -1,7 +1,15 @@
 # deepWRF  (part of [DataWave](https://datawaveproject.github.io/) project)
 This is a tutorial for using WRF (Deep configuration with model top at 1 Pa) to generate high resolution simulation of GWs.
 
+WRF is a very good community model. This tutorial is based on many online materials. Here are just a few references that should be useful for understanding the WRF system.
 
+[WRF user Guide](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.2/WRFUsersGuide_v42.pdf)
+
+[WRF online tutorial (official)](https://www2.mmm.ucar.edu/wrf/OnLineTutorial/index.php)
+
+[WRF Tech Note (Model equation and Physics)](https://opensky.ucar.edu/islandora/object/opensky:2898)
+
+In this tutorial, I mainly focus on the part that is related to DeepWave project. Nonetheless, the statements here are based on my personal experience of running the model only.
 
 
 # Basic Steps for running WRF
