@@ -129,13 +129,34 @@ Output file on each processer and join them later
 **2. Model stability**
    
    a. METGRID.TBL file
+   
+   replace sixteen point average to 4 point average
 
    b. cfl instability
+   
+   There is not many options for this one. One can only reduce time-step if cfl is the casue of model crash.
 
    c. wrffdda file
+   
+   It is possible to have unphysical values in wrffdda file sometimes. It is a good practice to check all the variables (especially Q humidity) are reasonable (1e-6 < Q < 0.03)
+   
 
    d. terrain
+   
+   use epssm between 0.3-0.5 when handling complex terrain with large gradient.
 
 **3. Domain Size limit**
+
+When using ERA5, it seems that real.exe have issues processing large domain (over 2000 x 2000 for example).
+
+The error message is like
+
+
+    -------------- FATAL CALLED ---------------
+    FATAL CALLED FROM FILE: <stdin> LINE: 1199
+    p_top_requested < grid%p_top possible from data
+    -------------------------------------------
+
+This is misleading. It should be a memory issue.
 
 
