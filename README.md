@@ -36,11 +36,29 @@ b. script for configure and compile WRF on Stampede2
 [compile_WRF_stampede2.sh](https://github.com/yqsun91/deepWRF/blob/main/compile_WRF_stampede2.sh)
 
 
-If compiled successfully, one will find wrf.exe and real.exe in the **run** folder.
+If compiled successfully, one will find wrf.exe and real.exe in the **main** folder and **run** folder.
+Here is one example for the output.
+
+    ==========================================================================
+    build started:   Sun Jun 18 12:01:26 CDT 2023
+    build completed: Sun Jun 18 12:46:08 CDT 2023
+    
+    --->                  Executables successfully built                  <---
+    
+    -rwx------ 1 tg882446 G-819272 51661680 Jun 18 12:46 main/ndown.exe
+    -rwx------ 1 tg882446 G-819272 51705272 Jun 18 12:46 main/real.exe
+    -rwx------ 1 tg882446 G-819272 50979016 Jun 18 12:46 main/tc.exe
+    -rwx------ 1 tg882446 G-819272 58497392 Jun 18 12:44 main/wrf.exe
+    
+    ==========================================================================
+
 
 
 
 **After** WRF is compiled, then WPS can be compiled fairly easily. Any version of WPS after 4.0 released by NCAR will be good as no modification is made for WPS.
+
+You will get geogrid.exe, ungrib.exe, and metgrid.exe after WPS is successfully compiled.
+
 
 
 
