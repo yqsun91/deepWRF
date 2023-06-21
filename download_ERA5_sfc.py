@@ -1,4 +1,4 @@
-# download ERA5 surface-level data, change xxxxxxxx to 20160801 for one day, can also do e.g., '20160801/to/20160831' for longer times 
+# download ERA5 surface-level data, change xxxxxxxx to the date (e.g., 20160801 for one day, can also do e.g., '20160801/to/20160831' for longer times)
 
 import cdsapi
 c = cdsapi.Client()
