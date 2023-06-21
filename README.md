@@ -61,7 +61,11 @@ One sample Python script I am using for downloading ERA5 file.
         'grid':"0.25/0.25",
     },'ERA5-xxxxxxxx-sfc.grb')
 
-The downloaded ERA5 file ( ERA5-xxxxxxxx-ml.grb and ERA5-xxxxxxxx-sfc.grb if using the samples provided) is in GRIB2 format
+The downloaded ERA5 file ( ERA5-xxxxxxxx-ml.grb and ERA5-xxxxxxxx-sfc.grb if using the samples provided) is not in uniform GRIB format. (model level is GRIB2 and surface level is GRIB1, according to the WPS system).
+
+So to prepare the ERA5 data for the ungrib.exe (part of WPS system), GRIB-API is needed ([ecCodes](https://confluence.ecmwf.int/display/ECC/What+is+ecCodes) is suggested here)
+For surface-level file,
+    write "[centre]_[dataDate]_[dataType]_[levelType]_[step].grib[edition]";
 
 **2. Compile WRF and WPS Model**
     
