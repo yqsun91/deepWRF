@@ -61,6 +61,8 @@ One sample Python script I am using for downloading ERA5 file.
         'grid':"0.25/0.25",
     },'ERA5-xxxxxxxx-sfc.grb')
 
+The downloaded ERA5 file ( ERA5-xxxxxxxx-ml.grb and ERA5-xxxxxxxx-sfc.grb if using the samples provided) is in GRIB2 format
+
 **2. Compile WRF and WPS Model**
     
 We use WRF model (based on WRF version 4.0) that is modified by Chris Kruse [(Kruse et al. 2022)](https://doi.org/10.1175/JAS-D-21-0252.1)
@@ -74,7 +76,7 @@ It could take some time to compile both in a new system.
 
 Here I provide the script I use on Stampede2
 
-a. script for installing required libraries on Stampede
+a. script for installing required libraries on Stampede2
 [install_libs.sh](https://github.com/yqsun91/deepWRF/blob/main/install_libs.sh)
 
 b. script for configure and compile WRF on Stampede2
