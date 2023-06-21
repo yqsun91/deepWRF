@@ -3,7 +3,7 @@ This is a tutorial for using WRF (Deep configuration with model top at 1 Pa) to 
 
 WRF is a very good community model. This tutorial is based on many online materials. Here are just a few references that should be useful for understanding the WRF system.
 
-[WRF user Guide](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.2/WRFUsersGuide_v42.pdf)
+[WRF user Guide (**"the" guide for running WRF**)](https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.2/WRFUsersGuide_v42.pdf)
 
 [WRF online tutorial (official)](https://www2.mmm.ucar.edu/wrf/OnLineTutorial/index.php)
 
@@ -21,8 +21,45 @@ WRF is a regional model. After we decide the domain location and the simulation 
 
 ERA5 data can be downloaded from the Climate Data Store (CDS) https://cds.climate.copernicus.eu/#!/home
 There is detailed instruction on this here. https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5
-I will work on more details regarding our application in the upcoming days.
 
+*I will work on more details regarding our application in the upcoming days.
+
+One sample Python script I am using for downloading ERA5 file.
+
+    # This is for model-level data
+    
+    import cdsapi
+    c = cdsapi.Client()
+    c.retrieve('reanalysis-era5-complete',{
+        'class':'ea',
+        'date':'xxxxxxxx',
+        'area':'90/-180/-90/180',
+        'expver':'1',
+        'levelist': '1/to/137',
+        'levtype':'ml',
+        'param':'129/130/131/132/133/152',
+        'stream':'oper',
+        'time':'00/to/23/by/1',
+        'type':'an',
+        'grid':"0.25/0.25",
+    },'ERA5-xxxxxxxx-ml.grb')
+
+
+    # script for surface level data
+    import cdsapi
+    c = cdsapi.Client()
+    c.retrieve('reanalysis-era5-complete',{
+        'class':'ea',
+        'date':'xxxxxxxx',
+        'area':'90/-180/-90/180',
+        'expver':'1',
+        'levtype':'sfc',
+        'param':'msl/sp/skt/2t/10u/10v/2d/z/lsm/sst/ci/sd/stl1/stl2/stl3/stl4/swvl1/swvl2/swvl3/swvl4',
+        'stream':'oper',
+        'time':'00/to/23/by/1',
+        'type':'an',
+        'grid':"0.25/0.25",
+    },'ERA5-xxxxxxxx-sfc.grb')
 
 **2. Compile WRF and WPS Model**
     
